@@ -26,6 +26,47 @@ h5{
     @apply absolute px-6 duration-200 w-52 bottom-4 md:bottom-8 md:px-10 group-hover:scale-110 group-hover:text-black
 }
 
+.hamburger{
+  cursor:pointer;
+  width:24px;
+  height:24px;
+  transition:all 0.25s;
+  position :relative
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  position:absolute;
+  width:24px;
+  height:2px;
+  top:0;
+  left:0;
+  background:#fff;
+  tranform: rotate(0);
+  transition:all 0.5s
+}
+.hamburger-middle {
+  tranform: translateY(7px);
+}
+.hamburger-bottom{
+  tranform: translateY(14px);
+}
+.open{
+  tranform: rotate(90deg);
+}
+.open .hamburger-top {
+  tranform:rotate(45deg) translateY(6px) translateX(6px);
+}
+
+.open .hamburger-middle {
+  display: none;
+
+}
+
+.open .hamburger-bottom {
+  tranform : rotate(-45deg) translateY(6px) translateX(-6px);
+}
 @media (max-width: 576px) {
   #hero {
     background-image: url("https://picsum.photos/id/1016/600/400.jpg");
